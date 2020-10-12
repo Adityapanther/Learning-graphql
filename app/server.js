@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 const env = require('dotenv');
+const expressGraphQl = require('express-graphql');
+const graphQl = require('graphql');
+
 const app = express();
 
 env.config();
