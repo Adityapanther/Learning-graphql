@@ -1,0 +1,21 @@
+{
+  "name": "graphql-demo",
+  "version": "1.0.0",
+  "description": "this is demo of graphql",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "nodemon app/server.js"
+  },
+  "author": "Aditya panther",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
