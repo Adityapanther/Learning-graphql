@@ -1,0 +1,46 @@
+{
+    "users": [
+        {
+            "name": "Ankita sing",
+            "age": 18,
+            "note": "nom ba ki na"
+        },
+        {
+            "name": "Aditya lam",
+            "age": 24,
+            "note": "how to lam"
+        },
+        {
+            "name": "nitu chudail",
+            "age": 74,
+            "note": "35465 huyjrfu id"
+        },
+        {
+            "name": "ladli maurya",
+            "age": 12,
+            "note": "how atr uoy adit ladli"
+        }
+    ],
+    "messages": [
+        {
+            "name":"Ankita sing",
+            "message": "how are you aditya"
+        },
+        {
+            "name": "Aditya lam",
+            "message": "how to hack instagram"
+        },
+        {
+            "name": "ladli maurya",
+            "message": "do you have any idea"
+        },
+        {
+            "name": "nitu chudail",
+            "message": "how are you friends"
+        },
+        {
+            "name": "Aditya lam",
+            "message": "how are you aditya"
+        }
+    ]
+}
