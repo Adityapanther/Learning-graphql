@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const env = require('dotenv');
 const {graphqlHTTP} = require('express-graphql');
+const db = require("./database/db");
 const {
     graphql,
     buildSchema
@@ -11,18 +12,28 @@ const app = express();
 
 var schema = buildSchema(`
   type Query {
-    hello: [How]
+    users:[user],
+    messages:[message]
   }
 
-  type How {
+  type user {
       name: String,
       age: Int,
       note: String
   }
+
+  type message {
+      name: String,
+      message: String
+  }
+
+
+
 `);
 
 var root = {
-    hello: () => 'Hello world!'
+    users: () => db.users,
+    messages: () => db.messages
 };
 
 app.use('/graphql', new graphqlHTTP({
@@ -32,34 +43,9 @@ app.use('/graphql', new graphqlHTTP({
     
 }))
 
-var domData = {
-    users: [
-        {
-            name:"Ankita sing",
-            age:18,
-            note:"nom ba ki na"
 
-        },
-        {
-            name: "Aditya lam",
-            age: 24,
-            note:"how to lam"
 
-        },
-        {
-            name: "nitu chudail",
-            age: 74,
-            note:"35465 huyjrfu id"
 
-        },
-        {
-            name: "ladli maurya",
-            age:12,
-            note:"how atr uoy adit ladli"
-
-        },
-    ]
-}
 
 
 env.config();
