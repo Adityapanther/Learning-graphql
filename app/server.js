@@ -11,7 +11,13 @@ const app = express();
 
 var schema = buildSchema(`
   type Query {
-    hello: String
+    hello: [How]
+  }
+
+  type How {
+      name: String,
+      age: Int,
+      note: String
   }
 `);
 
@@ -25,6 +31,35 @@ app.use('/graphql', new graphqlHTTP({
     graphiql: true,
     
 }))
+
+var domData = {
+    users: [
+        {
+            name:"Ankita sing",
+            age:18,
+            note:"nom ba ki na"
+
+        },
+        {
+            name: "Aditya lam",
+            age: 24,
+            note:"how to lam"
+
+        },
+        {
+            name: "nitu chudail",
+            age: 74,
+            note:"35465 huyjrfu id"
+
+        },
+        {
+            name: "ladli maurya",
+            age:12,
+            note:"how atr uoy adit ladli"
+
+        },
+    ]
+}
 
 
 env.config();
